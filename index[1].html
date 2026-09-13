@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Shanza Malik — Junior WordPress Developer and Virtual Assistant portfolio.">
+  <title>Shanza Malik | WordPress Developer & Virtual Assistant</title>
+  <style>
+:root{
+  --ink:#142033; --muted:#667085; --paper:#ffffff; --soft:#f5f7fb;
+  --line:#e7eaf0; --accent:#635bff; --accent2:#8b5cf6;
+  --shadow:0 20px 60px rgba(20,32,51,.10);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
+a{text-decoration:none;color:inherit}
+.container{width:min(1120px,92%);margin:auto}
+.nav{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav-inner{height:72px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:22px;font-weight:800;letter-spacing:-.04em}.logo span{color:var(--accent)}
+nav{display:flex;gap:28px;font-size:14px;font-weight:650;color:#475467}
+nav a:hover{color:var(--accent)}
+.menu-toggle{display:none;border:0;background:none;font-size:24px}
+.hero{padding:100px 0 80px;background:radial-gradient(circle at 80% 10%,#eeeaff 0,transparent 35%),linear-gradient(180deg,#fff,#fafbff)}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:70px;align-items:center}
+.eyebrow{font-size:11px;letter-spacing:.16em;font-weight:800;color:var(--accent);margin-bottom:13px}
+h1{font-size:clamp(42px,6vw,72px);line-height:1.02;letter-spacing:-.055em;max-width:760px}
+h1 span{color:var(--accent)}
+h2{font-size:clamp(30px,4vw,45px);line-height:1.08;letter-spacing:-.04em}
+h3{font-size:20px;letter-spacing:-.02em}
+.hero-text{font-size:18px;color:var(--muted);max-width:650px;margin:24px 0 28px}
+.buttons{display:flex;gap:12px;flex-wrap:wrap}.btn{padding:13px 20px;border-radius:10px;font-weight:750;font-size:14px}
+.primary{background:var(--ink);color:white}.secondary{border:1px solid var(--line);background:#fff}
+.quick-facts{display:flex;gap:30px;margin-top:50px;flex-wrap:wrap}.quick-facts div{display:flex;flex-direction:column}.quick-facts strong{font-size:14px}.quick-facts small{color:var(--muted)}
+.hero-card{padding:25px;border:1px solid var(--line);border-radius:24px;background:white;box-shadow:var(--shadow);transform:rotate(1.2deg)}
+.browser{border-radius:15px;overflow:hidden;background:#f4f5f9;border:1px solid #e1e4ea}
+.browser-top{height:34px;display:flex;gap:6px;align-items:center;padding:0 12px;background:#e8eaf0}.browser-top i{width:8px;height:8px;border-radius:50%;background:#c4c8d1}
+.browser-content{padding:32px 24px}.mini-line{height:9px;width:55%;background:#cfd4df;border-radius:20px;margin-bottom:11px}.mini-line.wide{width:78%;height:15px;background:#9fa7b7}.mini-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:28px 0}.mini-grid div{height:105px;border-radius:10px;background:#d9dde6}.mini-button{width:105px;height:28px;border-radius:7px;background:#7770ff}.card-label{font-size:12px;color:var(--muted);margin-top:15px}
+.section{padding:90px 0}.alt{background:var(--soft)}.two-col{display:grid;grid-template-columns:.8fr 1.2fr;gap:80px}.copy{color:#475467;font-size:16px}.copy p+p{margin-top:15px}
+.skill-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:35px}.skill-grid article{background:#fff;border:1px solid var(--line);border-radius:16px;padding:25px}.skill-grid span{color:var(--accent);font-weight:800;font-size:12px}.skill-grid h3{margin:12px 0 8px}.skill-grid p,.section-intro{color:var(--muted);font-size:14px}
+.section-intro{max-width:650px;margin:14px 0 35px}
+.project-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.project{border:1px solid var(--line);border-radius:18px;overflow:hidden;background:#fff;box-shadow:0 8px 30px rgba(20,32,51,.04)}
+.project-visual{height:215px;display:flex;align-items:center;justify-content:center;padding:25px;background:#eef0ff}
+.code-visual{background:#141a2a}.figma-visual{background:#f3efff}.excel-visual{background:#edf7f1}
+.mock-window{width:82%;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 12px 35px rgba(0,0,0,.12)}.mock-header{height:22px;background:#dfe2eb}.mock-body{padding:22px}.mock-body b{display:block;font-size:18px;margin-bottom:12px}.mock-body span{display:block;height:7px;width:70%;background:#e0e3ea;margin:8px 0;border-radius:10px}
+.code-card{border:1px solid #3b455b;border-radius:12px;padding:25px;width:75%;display:flex;flex-direction:column;gap:9px;color:#aeb8cb}.code-card strong{color:#fff;font-size:22px}.code-card em{font-style:normal;color:#9b93ff}
+.design-card{background:#fff;border-radius:13px;padding:20px;width:75%;box-shadow:0 15px 35px rgba(70,40,120,.12)}.design-card div{height:14px;background:#e2d9ff;border-radius:6px;margin-bottom:8px}.design-card div:nth-child(2){width:70%}.design-card div:nth-child(3){width:85%;height:55px;background:#f0ecff}.design-card b{font-size:14px}
+.sheet{background:#fff;border:1px solid #d4e4d9;border-radius:10px;width:75%;padding:18px;display:grid;grid-template-columns:1fr 1fr;gap:8px}.sheet b{grid-column:1/-1;font-size:18px}.sheet span{background:#eef5ef;padding:8px;border-radius:5px;font-size:12px}
+.project-body{padding:25px}.tag{font-size:10px;letter-spacing:.14em;font-weight:800;color:var(--accent);margin-bottom:8px}.project-body p:not(.tag){color:var(--muted);font-size:14px}.tech{display:flex;gap:7px;flex-wrap:wrap;margin-top:18px}.tech span{font-size:11px;padding:5px 9px;border:1px solid var(--line);border-radius:20px}
+.service-list{margin-top:30px;border-top:1px solid var(--line)}.service-list div{display:flex;justify-content:space-between;gap:20px;padding:20px 0;border-bottom:1px solid var(--line)}.service-list strong{font-size:17px}.service-list span{color:var(--muted);font-size:14px}
+.contact{background:var(--ink);color:#fff}.contact-box{display:grid;grid-template-columns:1fr .7fr;gap:70px;align-items:center}.contact .eyebrow{color:#a8a2ff}.contact p:not(.eyebrow){color:#b7bfce;margin-top:18px}.contact-links{display:flex;flex-direction:column;gap:14px}.contact-links a{padding-bottom:10px;border-bottom:1px solid #374052;font-weight:650}.contact-links a:hover{color:#b0aaff}
+footer{background:#0d1420;color:#8993a5;padding:20px 0;font-size:12px}.footer-inner{display:flex;justify-content:space-between;gap:15px}
+@media(max-width:850px){nav{display:none;position:absolute;top:72px;left:0;right:0;background:#fff;border-bottom:1px solid var(--line);padding:18px 4%;flex-direction:column;gap:15px}.nav.open nav{display:flex}.menu-toggle{display:block}.hero-grid,.two-col,.contact-box{grid-template-columns:1fr}.hero{padding-top:70px}.hero-card{max-width:600px}.skill-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){h1{font-size:43px}.section{padding:65px 0}.project-grid{grid-template-columns:1fr}.skill-grid{grid-template-columns:1fr}.quick-facts{margin-top:35px;gap:18px}.service-list div{flex-direction:column;gap:3px}.footer-inner{flex-direction:column}.hero-card{padding:15px}.project-visual{height:190px}}
+
+</style>
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="logo" href="#home">Shanza<span>.</span></a>
+      <button class="menu-toggle" aria-label="Open menu">☰</button>
+      <nav id="nav-menu">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">JUNIOR WORDPRESS DEVELOPER • VIRTUAL ASSISTANT</p>
+          <h1>Websites that are <span>clean, responsive,</span> and built around your needs.</h1>
+          <p class="hero-text">
+            I'm Shanza Malik, a Computer Science graduate with hands-on experience in WordPress,
+            Elementor, HTML, CSS, JavaScript, website redesign, troubleshooting, and administrative support.
+          </p>
+          <div class="buttons">
+            <a class="btn primary" href="#projects">View my work</a>
+            <a class="btn secondary" href="#contact">Contact me</a>
+          </div>
+          <div class="quick-facts">
+            <div><strong>WordPress</strong><small>Design & customization</small></div>
+            <div><strong>Front-end</strong><small>HTML • CSS • JavaScript</small></div>
+            <div><strong>Remote</strong><small>Available for remote work</small></div>
+          </div>
+        </div>
+        <div class="hero-card">
+          <div class="browser">
+            <div class="browser-top"><i></i><i></i><i></i></div>
+            <div class="browser-content">
+              <div class="mini-line wide"></div>
+              <div class="mini-line"></div>
+              <div class="mini-grid"><div></div><div></div><div></div></div>
+              <div class="mini-button"></div>
+            </div>
+          </div>
+          <p class="card-label">WordPress • Responsive Design • Client Support</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container two-col">
+        <div>
+          <p class="eyebrow">ABOUT ME</p>
+          <h2>Technical skills with a practical, client-focused approach.</h2>
+        </div>
+        <div class="copy">
+          <p>
+            I am a Computer Science graduate with experience in web development, WordPress,
+            website design, client-based freelance projects, and administrative support.
+          </p>
+          <p>
+            During my internship at Cane Technologies Pvt. Limited, I worked on small web-development
+            projects and designed an e-commerce website using WordPress. I also completed freelance
+            website projects through Fiverr, including business website redesigns, client-requested
+            changes, and front-end bug fixing.
+          </p>
+          <p>
+            I am currently looking for remote opportunities as a Junior WordPress Developer,
+            Web Developer, Virtual Assistant, or Technical Virtual Assistant.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section alt">
+      <div class="container">
+        <p class="eyebrow">SKILLS</p>
+        <h2>What I can help with</h2>
+        <div class="skill-grid">
+          <article><span>01</span><h3>WordPress</h3><p>Website design, Elementor, page customization, redesigns, and front-end troubleshooting.</p></article>
+          <article><span>02</span><h3>Front-end Development</h3><p>HTML5, CSS3, JavaScript, responsive layouts, and converting design concepts into web pages.</p></article>
+          <article><span>03</span><h3>Website Redesign</h3><p>Layout, styling, page structure, and client-requested front-end improvements.</p></article>
+          <article><span>04</span><h3>Virtual Assistance</h3><p>Data entry, Excel, Google Workspace, online research, email management, and customer support.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="container">
+        <p class="eyebrow">SELECTED WORK</p>
+        <h2>Projects & practical samples</h2>
+        <p class="section-intro">
+          These entries describe work and portfolio samples without claiming private client material as public work.
+        </p>
+
+        <div class="project-grid">
+          <article class="project">
+            <div class="project-visual wordpress-visual">
+              <div class="mock-window"><div class="mock-header"></div><div class="mock-body"><b>ONLINE STORE</b><span></span><span></span><span></span></div></div>
+            </div>
+            <div class="project-body">
+              <p class="tag">INTERNSHIP PROJECT</p>
+              <h3>WordPress E-commerce Website</h3>
+              <p>Designed and customized an e-commerce website using WordPress, including page layouts, styling, and interface customization.</p>
+              <div class="tech"><span>WordPress</span><span>HTML</span><span>CSS</span></div>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-visual code-visual">
+              <div class="code-card"><span>&lt;section&gt;</span><strong>Responsive Web Page</strong><em>HTML + CSS</em><span>&lt;/section&gt;</span></div>
+            </div>
+            <div class="project-body">
+              <p class="tag">FREELANCE EXPERIENCE</p>
+              <h3>Business Website Redesign</h3>
+              <p>Redesigned existing business websites, updated layouts and styling, implemented requested changes, and fixed front-end issues.</p>
+              <div class="tech"><span>HTML5</span><span>CSS3</span><span>JavaScript</span></div>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-visual figma-visual">
+              <div class="design-card"><div></div><div></div><div></div><b>FIGMA → HTML</b></div>
+            </div>
+            <div class="project-body">
+              <p class="tag">PORTFOLIO SAMPLE</p>
+              <h3>Responsive Design Conversion</h3>
+              <p>A demonstration project for converting a design concept into a clean, responsive HTML/CSS page. Replace this card with your own screenshot when available.</p>
+              <div class="tech"><span>HTML</span><span>CSS</span><span>Responsive</span></div>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-visual excel-visual">
+              <div class="sheet"><b>EXCEL</b><span>Data</span><span>Research</span><span>Formatting</span><span>Accuracy</span></div>
+            </div>
+            <div class="project-body">
+              <p class="tag">PORTFOLIO SAMPLE</p>
+              <h3>Excel & Data Entry Workflow</h3>
+              <p>A demonstration sample showing organized spreadsheet work, data formatting, and structured information handling.</p>
+              <div class="tech"><span>Excel</span><span>Google Sheets</span><span>Data Entry</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section alt">
+      <div class="container">
+        <p class="eyebrow">SERVICES</p>
+        <h2>Ways I can support your team</h2>
+        <div class="service-list">
+          <div><strong>WordPress Website</strong><span>Design • Elementor • Customization</span></div>
+          <div><strong>Website Redesign</strong><span>Layout • Styling • Front-end fixes</span></div>
+          <div><strong>HTML/CSS Development</strong><span>Responsive pages • Design conversion</span></div>
+          <div><strong>Virtual Assistance</strong><span>Data entry • Excel • Research • Admin support</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact">
+      <div class="container contact-box">
+        <div>
+          <p class="eyebrow">LET'S WORK TOGETHER</p>
+          <h2>Have a project or remote role in mind?</h2>
+          <p>I am open to remote Junior WordPress Developer, Web Developer, Virtual Assistant, and Technical Virtual Assistant opportunities.</p>
+        </div>
+        <div class="contact-links">
+          <a href="mailto:shanzayawan113@gmail.com">shanzayawan113@gmail.com</a>
+          <a href="tel:+923161530113">+92 316 1530113</a>
+          <a href="https://www.linkedin.com/in/shanza-malik-905b8a1b5/" target="_blank" rel="noopener">LinkedIn profile ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Shanza Malik</span>
+      <span>WordPress Developer • Virtual Assistant</span>
+    </div>
+  </footer>
+
+  <script>
+const nav = document.querySelector(".nav");
+const toggle = document.querySelector(".menu-toggle");
+toggle.addEventListener("click", () => nav.classList.toggle("open"));
+
+document.querySelectorAll("#nav-menu a").forEach(link => {
+  link.addEventListener("click", () => nav.classList.remove("open"));
+});
+
+document.getElementById("year").textContent = new Date().getFullYear();
+
+</script>
+</body>
+</html>
